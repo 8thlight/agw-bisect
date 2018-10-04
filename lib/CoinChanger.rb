@@ -1,13 +1,17 @@
 class CoinChanger
 
+  COINS = [200, 100, 50, 20, 10, 5, 2, 1]
+
   def self.change(amount)
-    return [200] if amount > 199
-    return [100] if amount > 99
-    return [50] if amount > 49
-    return [20] if amount > 19
-    return [10] if amount > 9
-    return [5] if amount > 4
-    return [2] if amount > 1
-    [1]
+    change = []
+
+    COINS.each do |coin|
+      if(amount >= coin)
+        change << coin
+        amount = amount - coin
+      end
+    end
+
+    change
   end
 end
