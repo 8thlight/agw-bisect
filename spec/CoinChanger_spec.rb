@@ -41,4 +41,12 @@ RSpec.describe CoinChanger do
   it "15p returns 10p + 5p" do
     expect(CoinChanger.change(4)).to eql([2,2])
   end
+
+  it "99p returns correct change" do
+    expect(CoinChanger.change(99)).to eql([50, 20, 20, 5, 2, 2])
+  end
+
+  it "1£ 87p returns correct change" do
+    expect(CoinChanger.change(187)).to eql([100, 50, 20, 10, 5, 2])
+  end
 end
