@@ -6,7 +6,7 @@ class CoinChanger
     change = []
 
     COINS.each do |coin|
-      if(amount >= coin)
+      while(amount >= coin) do
         change << coin
         amount = amount - coin
       end
