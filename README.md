@@ -27,3 +27,10 @@ $ git rebase -i <commit>
 $ git rebase --continue
 $ git rebase --abort
 ```
+
+For ruby:
+
+```
+$ rspec             # Runs the tests
+$ ruby <file_name>  # Runs the script
+```
