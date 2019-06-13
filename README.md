@@ -6,6 +6,9 @@ In order to fix our history too, apply `git bisect` to the repository and find t
 commit. Once you have found that commit, use `git rebase` in interactive mode to fix it and make
 sure that all commits now pass.
 
+Remember that to ease the search, you can give bisect a specific command with which to discern
+broken commits. For a broken test, most of the cases, a command that runs the test suite is enough.
+
 ## Helpful commands
 
 For bisect:
@@ -14,6 +17,7 @@ For bisect:
 $ git bisect start
 $ git bisect good <commit>
 $ git bisect bad <commit>
+$ git bisect run <command>
 ```
 
 For rebase:
